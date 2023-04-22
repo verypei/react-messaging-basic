@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import IGD from './views/IGD';
 import INPATIENT from './views/INPATIENT';

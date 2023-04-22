@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "nama_produk": "Dr. Runal Manandhar",
+        "nilai_transaksi": "Surgery",
+        "jumlah_pembelian": "3280",
+        "stock": "432"
+    },
+    {
+        "id": 2,
+        "nama_produk": "Dr. Bashanta",
+        "nilai_transaksi": "Additional Specialist",
+        "jumlah_pembelian": "4435",
+        "stock": "890"
+    }
+]

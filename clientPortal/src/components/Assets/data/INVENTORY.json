@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "nama_obat": "Paracetamol",
+        "dosis": "500mg",
+        "available": "3,256",
+        "buffer": "1,800",
+        "percentage": "18%"
+    },
+    {
+        "id": 2,
+        "nama_obat": "Paracetamol",
+        "dosis": "500mg",
+        "available": "3,256",
+        "buffer": "1,800",
+        "percentage": "18%"
+    },
+    {
+        "id": 3,
+        "nama_obat": "Paracetamol",
+        "dosis": "500mg",
+        "available": "3,256",
+        "buffer": "1,800",
+        "percentage": "18%"
+    },
+    {
+        "id": 4,
+        "nama_obat": "Paracetamol",
+        "dosis": "500mg",
+        "available": "3,256",
+        "buffer": "1,800",
+        "percentage": "18%"
+    },
+    {
+        "id": 5,
+        "nama_obat": "Paracetamol",
+        "dosis": "500mg",
+        "available": "3,256",
+        "buffer": "1,800",
+        "percentage": "18%"
+    },
+    {
+        "id": 6,
+        "nama_obat": "Paracetamol",
+        "dosis": "500mg",
+        "available": "3,256",
+        "buffer": "1,800",
+        "percentage": "18%"
+    },
+    {
+        "id": 7,
+        "nama_obat": "Paracetamol",
+        "dosis": "500mg",
+        "available": "3,256",
+        "buffer": "1,800",
+        "percentage": "18%"
+    },
+    {
+        "id": 8,
+        "nama_obat": "Paracetamol",
+        "dosis": "500mg",
+        "available": "3,256",
+        "buffer": "1,800",
+        "percentage": "18%"
+    }
+]

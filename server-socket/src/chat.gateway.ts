@@ -10,6 +10,7 @@ import {
   OnGatewayConnection,
   OnGatewayDisconnect,
   OnGatewayInit,
+  ConnectedSocket,
 } from '@nestjs/websockets';
 import { Server } from 'socket.io';
 
@@ -18,20 +19,35 @@ import { Server } from 'socket.io';
 export class ChatGateway
   implements OnGatewayConnection, OnGatewayDisconnect, OnGatewayInit
 {
-num = 1
+
   @WebSocketServer()
   server: Server;
 
-  @SubscribeMessage('events_sender')
-  handleEvent(@MessageBody() data:any) {
-    console.log(data,"--data from sender--",data.sender);
-    this.server.emit('events_re', data);
-    // this.handleDisconnect()
+  @SubscribeMessage('ER_CMS_SEND')
+  handleEventFromEr(@MessageBody() data:any) {
+    console.log(data.receiver,"---data receiver---");
+      this.server.emit(`${data.receiver}`, data);
+  }
+
+  @SubscribeMessage('PH_CMS_SEND')
+  handleEventFromPh(@MessageBody() data:any) {
+    this.server.emit(`${data.receiver}`, data);
+  }
+
+  @SubscribeMessage('LAB_CMS_SEND')
+  handleEventFromLab(@MessageBody() data:any) {
+    console.log(data,"---data from lab");
+    this.server.emit(`${data.receiver}`, data);
+  }
+
+  @SubscribeMessage('POLY_CMS_SEND')
+  handleEventFromPoly(@MessageBody() data:any) {
+    console.log(data,"---data from lab");
+    this.server.emit(`${data.receiver}`, data);
   }
 
   handleConnection(client: any, ...args: any[]) {
-    this.num++
-    console.log('User connected------',this.num);
+    console.log('User connected------');
   }
 
   handleDisconnect(client: any) {

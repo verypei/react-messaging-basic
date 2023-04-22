@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nama": "John Doe",
+        "penyakit": "Diabetes",
+        "code": "152-660-5591",
+        "createdAt": "04/03/2020 - 10 AM",
+        "status": "accepted"
+    },
+    {
+        "id": 2,
+        "nama": "John Doe",
+        "penyakit": "Diabetes",
+        "code": "152-660-5591",
+        "createdAt": "04/03/2020 - 10 AM",
+        "status": "proses"
+    },
+    {
+        "id": 3,
+        "nama": "John Doe",
+        "penyakit": "Diabetes",
+        "code": "152-660-5591",
+        "createdAt": "04/03/2020 - 10 AM",
+        "status": "proses"
+    },
+    {
+        "id": 4,
+        "nama": "John Doe",
+        "penyakit": "Diabetes",
+        "code": "152-660-5591",
+        "createdAt": "04/03/2020 - 10 AM",
+        "status": "proses"
+    },
+    {
+        "id": 5,
+        "nama": "John Doe",
+        "penyakit": "Diabetes",
+        "code": "152-660-5591",
+        "createdAt": "04/03/2020 - 10 AM",
+        "status": "proses"
+    },
+    {
+        "id": 6,
+        "nama": "John Doe",
+        "penyakit": "Diabetes",
+        "code": "152-660-5591",
+        "createdAt": "04/03/2020 - 10 AM",
+        "status": "proses"
+    }
+]
