@@ -37,7 +37,7 @@ export default function IGD() {
   // ----------------------- use fx socket io  receiver -----------------------
   useEffect(() => {
     socket.on("ER_1", handleReceiveMessage);
-    socket.on("GENERAL", handleReceiveMessage);
+    socket.on("GENERAL", handleGeneralMessage);
 
     return () => {
       socket.off();
@@ -75,16 +75,18 @@ export default function IGD() {
           return (prev = [...prev, obj]);
         });
         break;
-
-      case "general":
-        console.log("masuk ke G switch");
-        setGeneralMessage((prev) => {
-          return (prev = [...prev, obj]);
-        });
-        break;
     }
     socket.off();
   };
+
+  const handleGeneralMessage = (obj)=>{
+    console.log(obj,"--obj general");
+    console.log(messageGeneral,"---GM--->>>");
+    setGeneralMessage((prev) => {
+      return (prev = [...prev, obj]);
+    });
+    socket.off();
+  }
 
   const handleMessage = async (e) => {
     let obj = {
@@ -144,9 +146,9 @@ export default function IGD() {
             return (prev = [...prev, obj]);
           });
           messageInput.current.value = "";
-          obj.receiver = "GENERAL";
-          console.log(obj, "--obj to send=====>>");
-          socket.emit("ER_CMS_SEND", obj);
+          // obj.receiver = "GENERAL";
+          // console.log(obj, "--obj to send=====>>");
+          socket.emit("GENERAL", obj);
           socket.off();
         }
       }

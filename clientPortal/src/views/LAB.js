@@ -37,7 +37,10 @@ export default function LAB() {
 
   useEffect(() => {
     socket.on("LAB_1", handleReceiveMessage);
-    socket.on("GENERAL", handleReceiveMessage);
+    // socket.off();
+    socket.on("GENERAL", handleGeneralMessage);
+    // socket.off();
+
 
     return () => {
       socket.off();
@@ -75,16 +78,18 @@ export default function LAB() {
           return (prev = [...prev, obj]);
         });
         break;
-
-      case "general":
-        console.log("masuk ke G switch");
-        setGeneralMessage((prev) => {
-          return (prev = [...prev, obj]);
-        });
-        break;
     }
     socket.off();
   };
+
+  const handleGeneralMessage = (obj)=>{
+    console.log(obj,"--obj general");
+    console.log(messageGeneral,"---GM--->>>");
+    setGeneralMessage((prev) => {
+      return (prev = [...prev, obj]);
+    });
+    socket.off();
+  }
 
   const handleMessage = async (e) => {
     let obj = {
@@ -142,8 +147,8 @@ export default function LAB() {
             return (prev = [...prev, obj]);
           });
           messageInput.current.value = "";
-          obj.receiver = "GENERAL";
-          socket.emit("LAB_CMS_SEND", obj);
+          // obj.receiver = "GENERAL";
+          socket.emit("GENERAL", obj);
           socket.off();
         }
       }

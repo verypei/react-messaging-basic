@@ -46,6 +46,12 @@ export class ChatGateway
     this.server.emit(`${data.receiver}`, data);
   }
 
+  @SubscribeMessage('GENERAL')
+  handleEventGeneral(@MessageBody() data:any) {
+    console.log(data,"---data from lab");
+    this.server.emit(`GENERAL`, data);
+  }
+
   handleConnection(client: any, ...args: any[]) {
     console.log('User connected------');
   }
